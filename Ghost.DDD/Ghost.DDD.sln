@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghost.DDD", "Ghost.DDD\Ghost.DDD.csproj", "{548B30E2-3B5F-44D0-B989-41A3E2426F30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{548B30E2-3B5F-44D0-B989-41A3E2426F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548B30E2-3B5F-44D0-B989-41A3E2426F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548B30E2-3B5F-44D0-B989-41A3E2426F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548B30E2-3B5F-44D0-B989-41A3E2426F30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

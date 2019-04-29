@@ -1,0 +1,7 @@
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.DDD\Ghost.DDD\bin\Debug\Ghost.DDD.dll
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.DDD\Ghost.DDD\bin\Debug\Ghost.DDD.pdb
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.DDD\Ghost.DDD\bin\Debug\Castle.Windsor.dll
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.DDD\Ghost.DDD\bin\Debug\Castle.Core.dll
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.DDD\Ghost.DDD\obj\Debug\Ghost.DDD.csprojResolveAssemblyReference.cache
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.DDD\Ghost.DDD\obj\Debug\Ghost.DDD.dll
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.DDD\Ghost.DDD\obj\Debug\Ghost.DDD.pdb

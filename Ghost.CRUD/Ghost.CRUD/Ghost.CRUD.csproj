@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E783EB5-DD4B-43A1-83AE-CE6E726DE8CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ghost.CRUD</RootNamespace>
+    <AssemblyName>Ghost.CRUD</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBatisNet.DataMapper">
+      <HintPath>..\..\_lib\Castle.Facilities.IBatisNet\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\DaoBase.cs" />
+    <Compile Include="Dao\DaoHelper\MssqlDaoHelper.cs" />
+    <Compile Include="Dao\RelatedDaoBase.cs" />
+    <Compile Include="Dao\RelatedSelectDaoBase.cs" />
+    <Compile Include="Dao\SelectDaoBase.cs" />
+    <Compile Include="Dao\SqlMapConstants.cs" />
+    <Compile Include="Domain\Condition\ICondition.cs" />
+    <Compile Include="Domain\DaoException.cs" />
+    <Compile Include="Domain\DomainBase.cs" />
+    <Compile Include="Domain\DomainEqualityComparer.cs" />
+    <Compile Include="Domain\DomainExtensionMethod.cs" />
+    <Compile Include="Domain\DomainNameAttribute.cs" />
+    <Compile Include="Domain\RelatedDomainBase.cs" />
+    <Compile Include="IDao\IDaoBase.cs" />
+    <Compile Include="IDao\IDaoHelper.cs" />
+    <Compile Include="IDao\IRelatedDaoBase.cs" />
+    <Compile Include="IDao\IRelatedSelectDaoBase.cs" />
+    <Compile Include="IDao\ISelectDaoBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

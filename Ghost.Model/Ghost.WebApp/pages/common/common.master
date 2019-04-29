@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="common.master.cs" Inherits="pages_common_common" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="H-ui/static/h-ui/css/H-ui.css" rel="stylesheet" />
+    <link href="H-ui/static/h-ui/css/H-ui.ie.css" rel="stylesheet" />
+    <link href="H-ui/static/h-ui/css/H-ui.min.css" rel="stylesheet" />
+    <link href="H-ui/static/h-ui/css/H-ui.reset.css" rel="stylesheet" />
+    <script src="H-ui/static/h-ui/js/H-ui.js"></script>
+    <script src="H-ui/static/h-ui/js/H-ui.min.js"></script>
+    <script src="H-ui/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script src="H-ui/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+    <script src="H-ui/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

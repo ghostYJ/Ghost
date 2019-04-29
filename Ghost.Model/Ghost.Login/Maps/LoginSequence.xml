@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--V6.0-->
+<sqlMap namespace="LoginSequence"
+        xmlns="http://ibatis.apache.org/mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="LoginSequence" type="Ghost.Login.Domain.LoginSequence, Ghost.Login" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="LoginSequenceResult" class="LoginSequence">
+      <result property="Id" column="Ls_Id" />
+      <result property="LoginTokenId" column="Ls_LoginTokenId" />
+      <result property="LoginTime" column="Ls_LoginTime" />
+      <result property="IP" column="Ls_IP" nullValue="" />
+      <result property="ServerVariables" column="Ls_ServerVariables" nullValue="" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <insert id="Insert" parameterClass="LoginSequence">
+      INSERT INTO Ghost_BM_LoginSequence (Ls_Id,Ls_LoginTokenId, Ls_LoginTime, Ls_IP, Ls_ServerVariables, Ls_RecordTime)
+      VALUES (#Id#,#LoginTokenId#, #LoginTime#, #IP#, #ServerVariables#, GETDATE())
+      <selectKey resultClass="long" type="post" property="Id">
+        SELECT Ls_Id FROM Ghost_BM_LoginSequence WHERE Ls_Id = #Id#
+      </selectKey>
+    </insert>
+    <update id="Update" parameterClass="LoginSequence">
+      UPDATE Ghost_BM_LoginSequence SET Ls_LoginTokenId = #LoginTokenId#, Ls_LoginTime = #LoginTime#, Ls_IP = #IP#, Ls_ServerVariables = #ServerVariables#, Ls_UpdateTime = GETDATE()
+      WHERE Ls_Id = #Id#
+    </update>
+    <delete id="Delete" parameterClass="hashtable">
+      DELETE FROM Ghost_BM_LoginSequence
+      <include refid="SqlWhere" />
+    </delete>
+    <statement id="Truncate">
+      TRUNCATE TABLE Ghost_BM_LoginSequence
+    </statement>
+
+    <sql id="SqlFrom">
+      FROM Ghost_BM_LoginSequence
+      <include refid="SqlJoin" />
+    </sql>
+    <sql id="SqlWhereBase">
+      <isNotNull prepend="AND" property="Id">
+        Ls_Id = #Id#
+      </isNotNull>
+      <isNotNull prepend="AND" property="Ids">
+        <isNotEmpty property="Ids">
+          <iterate open="(" close=")" conjunction="OR" property="Ids">
+            Ls_Id = $Ids[]$
+          </iterate>
+        </isNotEmpty>
+        <isEmpty property="Ids">
+          0 = 1
+        </isEmpty>
+      </isNotNull>
+    </sql>
+    <sql id="SqlWhere">
+      <dynamic prepend="WHERE">
+        <include refid="SqlWhereBase" />
+        <include refid="SqlWhereCustom" />
+      </dynamic>
+    </sql>
+    <sql id="SqlOrderBy">
+      ORDER BY
+      <include refid="SqlOrderByCustom" />
+      Ls_Id DESC
+    </sql>
+    <select id="SelectCount" parameterClass="hashtable" resultClass="int">
+      SELECT COUNT(*)
+      <include refid="SqlFrom" />
+      <include refid="SqlWhere" />
+    </select>
+    <select id="Select" parameterClass="hashtable" resultMap="LoginSequenceResult">
+      SELECT *
+      <include refid="SqlFrom"/>
+      <include refid="SqlWhere"/>
+      <include refid="SqlOrderBy"/>
+    </select>
+    <select id="SelectTop" parameterClass="hashtable" resultMap="LoginSequenceResult">
+      SELECT TOP $TopCount$ *
+      <include refid="SqlFrom"/>
+      <include refid="SqlWhere"/>
+      <include refid="SqlOrderBy"/>
+    </select>
+    <select id="SelectByPage" parameterClass="hashtable" resultMap="LoginSequenceResult">
+      SELECT TOP $PageSize$ *
+      <include refid="SqlFrom" />
+      WHERE Ls_Id NOT IN
+      (SELECT TOP $NotInSize$ Ls_Id
+      <include refid="SqlFrom" />
+      <include refid="SqlWhere" />
+      <include refid="SqlOrderBy" />
+      )
+      <include refid="SqlWhereBase" />
+      <include refid="SqlWhereCustom" />
+      <include refid="SqlOrderBy" />
+    </select>
+
+    <!--Custom Sql Begin-->
+    <sql id="SqlJoin">
+    </sql>
+    <sql id="SqlOrderByCustom">
+    </sql>
+    <sql id="SqlWhereCustom">
+    </sql>
+    <!--Custom Sql End-->
+
+  </statements>
+
+</sqlMap>

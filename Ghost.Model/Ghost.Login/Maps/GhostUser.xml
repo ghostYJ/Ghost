@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--V6.0-->
+<sqlMap namespace="GhostUser"
+        xmlns="http://ibatis.apache.org/mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="GhostUser" type="Ghost.Login.Domain.GhostUser, Ghost.Login" />
+  </alias>
+
+  <resultMaps>
+    <resultMap id="GhostUserResult" class="GhostUser">
+      <result property="Id" column="U_Id" />
+      <result property="NickName" column="U_NickName" nullValue="" />
+      <result property="RealName" column="U_RealName" nullValue="" />
+      <result property="Sex" column="U_Sex" />
+      <result property="Mobile" column="U_Mobile" nullValue="" />
+      <result property="PassWord" column="U_PassWord" nullValue="" />
+      <result property="Email" column="U_Email" nullValue="" />
+      <result property="Province" column="U_Province" nullValue="" />
+      <result property="City" column="U_City" nullValue="" />
+      <result property="BirthDay" column="U_BirthDay" />
+      <result property="IsVip" column="U_IsVip" />
+      <result property="VipLevel" column="U_VipLevel" />
+      <result property="AccountBalance" column="U_AccountBalance" />
+      <result property="IsDisabled" column="U_IsDisabled" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <insert id="Insert" parameterClass="GhostUser">
+      INSERT INTO Core_GhostUser (U_Id,U_NickName, U_RealName, U_Sex, U_Mobile,U_PassWord, U_Email, U_Province, U_City, U_BirthDay, U_IsVip, U_VipLevel, U_AccountBalance,U_IsDisabled, U_RecordTime)
+      VALUES (#Id#,#NickName#, #RealName#, #Sex#, #Mobile#,#PassWord#, #Email#, #Province#, #City#, #BirthDay#, #IsVip#, #VipLevel#, #AccountBalance#,#IsDisabled#, GETDATE())
+      <selectKey resultClass="long" type="post" property="Id">
+        SELECT U_Id FROM Core_GhostUser WHERE U_Id = #Id#
+      </selectKey>
+    </insert>
+    <update id="Update" parameterClass="GhostUser">
+      UPDATE Core_GhostUser SET U_NickName = #NickName#, U_RealName = #RealName#, U_Sex = #Sex#, U_Mobile = #Mobile#,U_PassWord=#PassWord#, U_Email = #Email#, U_Province = #Province#, U_City = #City#, U_BirthDay = #BirthDay#, U_IsVip = #IsVip#, U_VipLevel = #VipLevel#, U_AccountBalance = #AccountBalance#,U_IsDisabled=#IsDisabled#, U_UpdateTime = GETDATE()
+      WHERE U_Id = #Id#
+    </update>
+    <delete id="Delete" parameterClass="hashtable">
+      DELETE FROM Core_GhostUser
+      <include refid="SqlWhere" />
+    </delete>
+    <statement id="Truncate">
+      TRUNCATE TABLE Core_GhostUser
+    </statement>
+
+    <sql id="SqlFrom">
+      FROM Core_GhostUser
+      <include refid="SqlJoin" />
+    </sql>
+    <sql id="SqlWhereBase">
+      <isNotNull prepend="AND" property="Id">
+        U_Id = #Id#
+      </isNotNull>
+      <isNotNull prepend="AND" property="Ids">
+        <isNotEmpty property="Ids">
+          <iterate open="(" close=")" conjunction="OR" property="Ids">
+            U_Id = '$Ids[]$'
+          </iterate>
+        </isNotEmpty>
+        <isEmpty property="Ids">
+          0 = 1
+        </isEmpty>
+      </isNotNull>
+    </sql>
+    <sql id="SqlWhere">
+      <dynamic prepend="WHERE">
+        <include refid="SqlWhereBase" />
+        <include refid="SqlWhereCustom" />
+      </dynamic>
+    </sql>
+    <sql id="SqlOrderBy">
+      ORDER BY
+      <include refid="SqlOrderByCustom" />
+      U_Id DESC
+    </sql>
+    <select id="SelectCount" parameterClass="hashtable" resultClass="int">
+      SELECT COUNT(*)
+      <include refid="SqlFrom" />
+      <include refid="SqlWhere" />
+    </select>
+    <select id="Select" parameterClass="hashtable" resultMap="GhostUserResult">
+      SELECT *
+      <include refid="SqlFrom"/>
+      <include refid="SqlWhere"/>
+      <include refid="SqlOrderBy"/>
+    </select>
+    <select id="SelectTop" parameterClass="hashtable" resultMap="GhostUserResult">
+      SELECT TOP $TopCount$ *
+      <include refid="SqlFrom"/>
+      <include refid="SqlWhere"/>
+      <include refid="SqlOrderBy"/>
+    </select>
+    <select id="SelectByPage" parameterClass="hashtable" resultMap="GhostUserResult">
+      SELECT TOP $PageSize$ *
+      <include refid="SqlFrom" />
+      WHERE U_Id NOT IN
+      (SELECT TOP $NotInSize$ U_Id
+      <include refid="SqlFrom" />
+      <include refid="SqlWhere" />
+      <include refid="SqlOrderBy" />
+      )
+      <include refid="SqlWhereBase" />
+      <include refid="SqlWhereCustom" />
+      <include refid="SqlOrderBy" />
+    </select>
+
+    <!--Custom Sql Begin-->
+    <sql id="SqlJoin">
+    </sql>
+    <sql id="SqlOrderByCustom">
+    </sql>
+    <sql id="SqlWhereCustom">
+      <isNotNull prepend="AND" property="IsVip">
+        U_IsVip = #IsVip#
+      </isNotNull>
+      <isNotNull prepend="AND" property="RealName">
+        U_RealName = #RealName#
+      </isNotNull>
+      <isNotNull prepend="AND" property="Mobile">
+        U_Mobile = #Mobile#
+      </isNotNull>
+      <isNotNull prepend="AND" property="Sex">
+        U_Sex = #Sex#
+      </isNotNull>
+      <isNotNull prepend="AND" property="Sex">
+        U_Sex = #Sex#
+      </isNotNull>
+      <isNotNull prepend="AND" property="VipLevel">
+        U_VipLevel = #VipLevel#
+      </isNotNull>
+    </sql>
+    <!--Custom Sql End-->
+
+  </statements>
+
+</sqlMap>

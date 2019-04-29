@@ -1,0 +1,10 @@
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.Utility\Ghost.Utility\bin\Debug\Ghost.Utility.dll
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.Utility\Ghost.Utility\bin\Debug\Ghost.Utility.pdb
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.Utility\Ghost.Utility\obj\Debug\Ghost.Utility.csprojResolveAssemblyReference.cache
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.Utility\Ghost.Utility\obj\Debug\Ghost.Utility.dll
+C:\Users\admin.T410\Desktop\Ghost.Net\Ghost.Utility\Ghost.Utility\obj\Debug\Ghost.Utility.pdb
+C:\Users\Admin\Desktop\Ghost\Ghost.Net\Ghost.Utility\Ghost.Utility\bin\Debug\Ghost.Utility.dll
+C:\Users\Admin\Desktop\Ghost\Ghost.Net\Ghost.Utility\Ghost.Utility\bin\Debug\Ghost.Utility.pdb
+C:\Users\Admin\Desktop\Ghost\Ghost.Net\Ghost.Utility\Ghost.Utility\obj\Debug\Ghost.Utility.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Ghost\Ghost.Net\Ghost.Utility\Ghost.Utility\obj\Debug\Ghost.Utility.dll
+C:\Users\Admin\Desktop\Ghost\Ghost.Net\Ghost.Utility\Ghost.Utility\obj\Debug\Ghost.Utility.pdb

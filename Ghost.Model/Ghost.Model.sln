@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Ghost.WebApp", "Ghost.WebApp\", "{77C8ECEE-83D8-421F-AA7F-50F330C6B803}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{527b773f-254d-4f6b-bc5e-bdf9f7ee1e38}|Ghost.Login.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_20262"
+		Debug.AspNetCompiler.PhysicalPath = "Ghost.WebApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_20262\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_20262"
+		Release.AspNetCompiler.PhysicalPath = "Ghost.WebApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_20262\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "20262"
+		SlnRelativePath = "Ghost.WebApp\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghost.Login", "Ghost.Login\Ghost.Login.csproj", "{527B773F-254D-4F6B-BC5E-BDF9F7EE1E38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ghost.Control.Test", "Ghost.Control.Test\Ghost.Control.Test.csproj", "{D0DD56DB-6AE4-47C5-A0B1-F0890CA50A91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{EAFAC985-AB1B-4959-8048-498872F71799}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77C8ECEE-83D8-421F-AA7F-50F330C6B803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C8ECEE-83D8-421F-AA7F-50F330C6B803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C8ECEE-83D8-421F-AA7F-50F330C6B803}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C8ECEE-83D8-421F-AA7F-50F330C6B803}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{527B773F-254D-4F6B-BC5E-BDF9F7EE1E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{527B773F-254D-4F6B-BC5E-BDF9F7EE1E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{527B773F-254D-4F6B-BC5E-BDF9F7EE1E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{527B773F-254D-4F6B-BC5E-BDF9F7EE1E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0DD56DB-6AE4-47C5-A0B1-F0890CA50A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0DD56DB-6AE4-47C5-A0B1-F0890CA50A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0DD56DB-6AE4-47C5-A0B1-F0890CA50A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0DD56DB-6AE4-47C5-A0B1-F0890CA50A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAFAC985-AB1B-4959-8048-498872F71799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFAC985-AB1B-4959-8048-498872F71799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFAC985-AB1B-4959-8048-498872F71799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFAC985-AB1B-4959-8048-498872F71799}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBC33009-C2DD-4599-81E1-D6056B0B6D12}
+	EndGlobalSection
+EndGlobal

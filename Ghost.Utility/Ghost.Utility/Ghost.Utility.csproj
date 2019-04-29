@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{828AE759-9AAE-464E-B83B-D9AD375820CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ghost.Utility</RootNamespace>
+    <AssemblyName>Ghost.Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\EnumAttribute.cs" />
+    <Compile Include="Exception\AccessForbiddenException.cs" />
+    <Compile Include="Exception\ExistsObjException.cs" />
+    <Compile Include="Exception\NotFoundObjException.cs" />
+    <Compile Include="Exception\ServiceException.cs" />
+    <Compile Include="Exception\UniqueException.cs" />
+    <Compile Include="Exception\ValidationException.cs" />
+    <Compile Include="ExtensionMethod\DateTimeExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\EnumExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\GenericDictionaryExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\HashtableExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\ListExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\MailMessageExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\MathExtensionMethod\DecimalNullableMathExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\MathExtensionMethod\DoubleNullableMathExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\MathExtensionMethod\FloatNullableMathExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\MathExtensionMethod\Int32NullableMathExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\MathExtensionMethod\Int64NullableMathExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\MathExtensionMethod\NullableMathExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\NullExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\StringExtensionMethod.cs" />
+    <Compile Include="ExtensionMethod\XmlLinqExtensionMethod.cs" />
+    <Compile Include="Helper\EnumHelper.cs" />
+    <Compile Include="My\StringTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SnowFlake\SnowFlake.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
