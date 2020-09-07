@@ -8,7 +8,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Reflection;
-using MetadataExtractor;
 
 public partial class test : System.Web.UI.Page
 {

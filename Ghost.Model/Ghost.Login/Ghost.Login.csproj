@@ -63,9 +63,6 @@
     <Compile Include="Domain\LoginTokenNotFoundException.cs" />
     <Compile Include="Domain\LoginToken\LoginToken.cs" />
     <Compile Include="Domain\LoginToken\LoginTokenCondition.cs" />
-    <Compile Include="Domain\Test\BaseDomain.cs" />
-    <Compile Include="Domain\Test\BaseDomainBrother.cs" />
-    <Compile Include="Domain\Test\SonDomain.cs" />
     <Compile Include="Domain\User\GhostUser.cs" />
     <Compile Include="Domain\User\GhostUserCondition.cs" />
     <Compile Include="Domain\WebLoginConstants.cs" />
@@ -76,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\" />
+    <Folder Include="Domain\Test\" />
     <Folder Include="Svc\" />
   </ItemGroup>
   <ItemGroup>
