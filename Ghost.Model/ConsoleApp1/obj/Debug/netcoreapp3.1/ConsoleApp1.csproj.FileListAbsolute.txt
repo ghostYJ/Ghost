@@ -1,0 +1,12 @@
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.exe
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.deps.json
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.json
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.dev.json
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.dll
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.pdb
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfoInputs.cache
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfo.cs
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
+C:\PersonalProject\Ghost.Net\Ghost.Model\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache
